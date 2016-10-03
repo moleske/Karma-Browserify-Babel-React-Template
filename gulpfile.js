@@ -46,7 +46,7 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.js', ['hotReload']);
 });
 
-gulp.task('serve', ['connect', 'watch']);
+gulp.task('serve', ['build', 'connect', 'watch']);
 
 gulp.task('clean:dist', function() {
    return del(['dist/*'])
